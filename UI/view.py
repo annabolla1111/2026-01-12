@@ -27,6 +27,8 @@ class View(ft.UserControl):
         self._ddAnno2 = ft.Dropdown(label="A", hint_text="Anno")
         self._btnCreaGrafo = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handleCreaGrafo)
 
+        self._controller.fillDDyear()
+
         cont1 = ft.Container(self._ddAnno1, width=250)
         cont2 = ft.Container(self._ddAnno2, width=250)
         row1 = ft.Row([cont1,cont2, self._btnCreaGrafo], alignment=ft.MainAxisAlignment.CENTER,
